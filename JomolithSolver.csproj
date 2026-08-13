@@ -1,0 +1,29 @@
+<Project Sdk="Godot.NET.Sdk/4.7.1">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+        <IsTrimmable>true</IsTrimmable>
+        <VerifyReferenceTrimCompatibility>true</VerifyReferenceTrimCompatibility>
+        <!-- Compiles the TwoDogWebBoot.cs bootstrap used by web (browser-wasm)
+             hosts; harmless on desktop. It takes a function pointer to the
+             source-generated plugins initializer, hence unsafe. -->
+        <DefineConstants>$(DefineConstants);LIBGODOT_ENABLED</DefineConstants>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <!-- Nested 2dog host projects: keep them out of this project's default
+             compile/content globs (each also carries a .gdignore so the Godot
+             editor skips them). -->
+        <DefaultItemExcludes>$(DefaultItemExcludes);JomolithSolver.2dog/**;JomolithSolver.web/**;JomolithSolver.tests/**</DefaultItemExcludes>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+        <!-- Web bootstrap: lives in the web host folder (out of the Godot
+             editor's sight) but must compile into THIS assembly - scripts are
+             resolved from the assembly holding the source-generated plugins
+             initializer. Inert when the web host is absent. -->
+        <Compile Include="JomolithSolver.web/TwoDogWebBoot.cs"
+                 Condition="Exists('$(MSBuildThisFileDirectory)JomolithSolver.web/TwoDogWebBoot.cs')"/>
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="RhuBulletSharp" Version="1.2.5" />
+    </ItemGroup>
+</Project>

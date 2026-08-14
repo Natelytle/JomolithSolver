@@ -12,6 +12,12 @@ public class ConstraintCollision : Constraint
         Friction = 0;
         Restitution = 0;
         CachedTangent1 = new Vector3(1, 0, 0);
+        GetCache(0).PositionSor = 1.0f;
+        GetCache(1).PositionSor = 1.0f;
+        GetCache(2).PositionSor = 1.0f;
+        GetCache(0).VelocitySor = 1.0f;
+        GetCache(1).VelocitySor = 1.0f;
+        GetCache(2).VelocitySor = 1.0f;
     }
 
     public Vector3 Normal { get; set; }
@@ -108,7 +114,7 @@ public class ConstraintCollision : Constraint
             posStage[1] = new ConstraintVariables();
             posStage[2] = new ConstraintVariables();
             posStage[1].MinImpulseValue = 0.0f;
-            posStage[2].MinImpulseValue = 0.0f;
+            posStage[1].MaxImpulseValue = 0.0f;
             posStage[2].MinImpulseValue = 0.0f;
             posStage[2].MaxImpulseValue = 0.0f;
         }

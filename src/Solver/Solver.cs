@@ -1,5 +1,6 @@
 using System;
 using System.Numerics;
+using BulletSharp;
 using BulletSharp.SoftBody;
 using JomolithSolver.Solver.Constraints;
 
@@ -143,6 +144,8 @@ public class Solver(SolverConfig config)
             outputs[i].Orientation = bodyProps[i].Orientation;
             outputs[i].LinearVelocity = bodyProps[i].LinearVelocity;
             outputs[i].AngularVelocity = bodyProps[i].AngularVelocity;
+
+            Console.WriteLine($"[body] pos={outputs[i].Position} angVel={outputs[i].AngularVelocity.Length():F3} det={outputs[i].Orientation.GetDeterminant():F4}");
         }
     }
 
@@ -174,11 +177,11 @@ public class Solver(SolverConfig config)
 
         var angle = posDelta.Angular.Length();
 
-        if (posDelta.Angular.Length() > 1e-10f)
+        if (angle > 1e-10f)
         {
-            var axis = posDelta.Angular / angle;
-            var rot = Matrix4x4.CreateFromQuaternion(Quaternion.CreateFromAxisAngle(axis, angle));
-            props.Orientation = rot * props.Orientation;
+            var axis = Vector3.Normalize(posDelta.Angular);
+            var rot = Quaternion.CreateFromRotationMatrix(props.Orientation) * Quaternion.CreateFromAxisAngle(-axis, angle);
+            props.Orientation = Matrix4x4.CreateFromQuaternion(rot);
         }
 
         props.Position += props.LinearVelocity * dt;
@@ -188,19 +191,19 @@ public class Solver(SolverConfig config)
         if (angle > 1e-10f)
         {
             var dtAngle = angle * dt;
-            var axis = props.AngularVelocity / angle;
-            var rot = Matrix4x4.CreateFromQuaternion(Quaternion.CreateFromAxisAngle(axis, dtAngle));
-            props.Orientation = rot * props.Orientation;
+            var axis = Vector3.Normalize(props.AngularVelocity);
+            var rot = Quaternion.CreateFromRotationMatrix(props.Orientation) * Quaternion.CreateFromAxisAngle(-axis, dtAngle); // TODO: Why??? the fuck?
+            props.Orientation = Matrix4x4.CreateFromQuaternion(rot);
         }
 
-        var c0 = Vector3.Normalize(props.Orientation[0].AsVector3());
-        var c2 = Vector3.Normalize(Vector3.Cross(c0, props.Orientation[1].AsVector3()));
+        var c0 = Vector3.Normalize(props.Orientation.GetColumn(0));
+        var c2 = Vector3.Normalize(Vector3.Cross(c0, props.Orientation.GetColumn(1)));
         var c1 = Vector3.Cross(c2, c0);
 
         props.Orientation = new Matrix4x4(
-            c0.X, c0.Y, c0.Z, 0,
-            c1.X, c1.Y, c1.Z, 0,
-            c2.X, c2.Y, c2.Z, 0,
+            c0.X, c1.X, c2.X, 0,
+            c0.Y, c1.Y, c2.Y, 0,
+            c0.Z, c1.Z, c2.Z, 0,
             0, 0, 0, 1
         );
     }

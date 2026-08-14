@@ -4,7 +4,7 @@ using System.Numerics;
 
 namespace JomolithSolver.Solver;
 
-public class SolverKernel
+public static class SolverKernel
 {
     public static void SolveKernel(
         ConstraintVariables[] velStage,
@@ -88,6 +88,9 @@ public class SolverKernel
 
                 offset += 3;
             }
+
+            if (velStage.Length >= Math.Max(offset, 3))
+                Console.WriteLine($"[solve] normalImpulse={velStage[offset - 3].Impulse:F4} t1={velStage[offset - 2].Impulse:F4} t2={velStage[offset - 1].Impulse:F4}");
         }
     }
 
@@ -486,8 +489,6 @@ public class SolverKernel
 
         return;
 
-        // Small wrapper function for solving variables that provides velocity and position dependent
-        // multipliers for the friction impulses 2nd and 3rd dimensions for collision constraints.
         void Solve3(
             Span<ConstraintVariables> vars,
             ref VirtualDisplacement virDA,

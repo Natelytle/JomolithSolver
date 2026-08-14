@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 using JomolithSolver.Solver.Constraints;
@@ -63,7 +64,8 @@ public class ContactManifold(Body a, Body b)
         }
 
         if (clean.Count < Collisions.Count)
-            for (var i = clean.Count; i < Collisions.Count; i++)
-                Collisions.RemoveAt(i);
+            Collisions.RemoveRange(clean.Count, Collisions.Count - clean.Count);
+
+        Console.WriteLine($"[manifold] cached={Collisions.Count} fresh={clean.Count}");
     }
 }

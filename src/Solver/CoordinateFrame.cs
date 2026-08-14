@@ -15,7 +15,7 @@ public record struct CoordinateFrame(in Matrix4x4 Rotation, in Vector3 Translati
 
     public static CoordinateFrame operator *(in CoordinateFrame cf, in CoordinateFrame other)
     {
-        return new CoordinateFrame(cf.Rotation * other.Rotation,
+        return new CoordinateFrame(other.Rotation * cf.Rotation,
             Vector3.TransformNormal(other.Translation, cf.Rotation) + cf.Translation);
     }
 

@@ -186,7 +186,7 @@ public class Body(long uid = 0)
         if (r.branchDirty) r.RecomputeBranchProperties();
 
         var rot = r.worldCFrame.Rotation;
-        var iWorld = rot * r.branchInertiaLocal * Matrix4x4.Transpose(rot);
+        var iWorld = Matrix4x4.Transpose(rot) * r.branchInertiaLocal * rot;
 
         var cofmWorld = r.worldCFrame.Translation + Vector3.TransformNormal(r.branchCofmOffsetLocal, rot);
         var d = worldPoint - cofmWorld;
@@ -267,7 +267,7 @@ public class Body(long uid = 0)
             shift *= totalMass;
             var inertiaAboutCofm = inertiaWorldOrigin - shift;
 
-            branchInertiaLocal = Matrix4x4.Transpose(worldCFrame.Rotation) * inertiaAboutCofm * worldCFrame.Rotation;
+            branchInertiaLocal =  worldCFrame.Rotation * inertiaAboutCofm * Matrix4x4.Transpose(worldCFrame.Rotation);
         }
         else
         {
@@ -289,7 +289,7 @@ public class Body(long uid = 0)
             outCofmWorld += myCofmWorld * Mass;
 
             var rot = myWorld.Rotation;
-            var iWorld = rot * InertiaBody * Matrix4x4.Transpose(rot);
+            var iWorld = Matrix4x4.Transpose(rot) * InertiaBody * rot;
             var r = myCofmWorld;
             var rdotr = Vector3.Dot(r, r);
 

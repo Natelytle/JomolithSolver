@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 using Godot;
 using JomolithSolver.Solver;
 using JomolithSolver.Solver.Constraints;
 using JomolithSolver.Utils;
 using static JomolithSolver.Solver.Solver;
+using Vector3 = Godot.Vector3;
 
 namespace JomolithSolver;
 
@@ -99,6 +101,9 @@ public partial class JomolithSolverWorld : Node
 
         foreach (var body in requiredBodies)
         {
+            // Apply gravity
+            body.AccumulateForce(new System.Numerics.Vector3(0, -(float)ProjectSettings.GetSetting("physics/3d/default_gravity") * body.Mass, 0));
+
             uidToIndex[body.Uid] = index;
 
             solverInputs[index].Position = body.GetWorldCFrame().Translation;
@@ -113,7 +118,11 @@ public partial class JomolithSolverWorld : Node
             solverInputs[index].ExternalAngularImpulse = body.ExternalRotationalImpulse;
 
             solverInputs[index].MassInv = body.IsStatic ? 0.0f : 1.0f / body.GetBranchMass();
-            solverInputs[index].InertiaInv = body.GetBranchInertiaWorldAtPoint(solverInputs[index].Position);
+            solverInputs[index].InertiaInv = new Matrix4x4();
+            if (Matrix4x4.Invert(body.GetBranchInertiaWorldAtPoint(solverInputs[index].Position), out var inverseInertia))
+            {
+                solverInputs[index].InertiaInv = inverseInertia;
+            }
             solverInputs[index].EffectiveMassMultiplier = body.IsStatic ? 0.0f : 1.0f;
 
             index++;
@@ -127,12 +136,6 @@ public partial class JomolithSolverWorld : Node
         dimsBuffer.Clear();
 
         int collisionCount = contactManager.GatherConstraints(constraintsBuffer, pairsBuffer, dimsBuffer, uidToIndex);
-
-        // Apply gravity
-        foreach (var b in requiredBodies)
-        {
-            b.AccumulateForce(new System.Numerics.Vector3(0, -(float)ProjectSettings.GetSetting("physics/3d/default_gravity") * b.Mass, 0));
-        }
 
         solver.Solve(
             solverInputs,
@@ -156,14 +159,16 @@ public partial class JomolithSolverWorld : Node
             var outData = solverOutputs[index];
 
             rb.Position = new Vector3(outData.Position.X, outData.Position.Y, outData.Position.Z);
-            rb.Basis = new Basis(
-                outData.Orientation.M11, outData.Orientation.M12, outData.Orientation.M13,
-                outData.Orientation.M21, outData.Orientation.M22, outData.Orientation.M23,
-                outData.Orientation.M31, outData.Orientation.M32, outData.Orientation.M33
-            );
+            rb.Basis = outData.Orientation.ToBasis();
+            rb.Basis = rb.Basis.ToMatrix().ToBasis().ToMatrix().ToBasis();
 
             rb.LinearVelocity = new Vector3(outData.LinearVelocity.X, outData.LinearVelocity.Y, outData.LinearVelocity.Z);
             rb.AngularVelocity = new Vector3(outData.AngularVelocity.X, outData.AngularVelocity.Y, outData.AngularVelocity.Z);
+        }
+
+        foreach (var b in requiredBodies)
+        {
+            b.ClearAccumulators();
         }
     }
 

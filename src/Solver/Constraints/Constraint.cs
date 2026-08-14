@@ -44,10 +44,10 @@ public abstract class Constraint
         bodyB = b;
         cacheData = new ConstraintVariables.ConstraintCache[dimensions];
 
-        for (int i = 0; i < cacheData.Length; i++)
-        {
-            cacheData[i] = new ConstraintVariables.ConstraintCache();
-        }
+        // for (int i = 0; i < cacheData.Length; i++)
+        // {
+        //     cacheData[i] = new ConstraintVariables.ConstraintCache();
+        // }
     }
 
     public void RestoreCacheAndBuildEquation(Span<ConstraintJacobianPair> jacobian, Span<ConstraintVariables> velStage,

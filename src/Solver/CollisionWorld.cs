@@ -249,6 +249,8 @@ public class CollisionWorld : IDisposable
                     Friction = combinedFriction,
                     Restitution = combinedRestitution
                 });
+
+                Console.WriteLine($"[contact] depth={depth:F5} normal={normal} posA={posOnA}");
             }
 
             if (points.Count == 0) outContacts.Remove(key);

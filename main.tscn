@@ -35,17 +35,20 @@ script = ExtResource("1_ig7tw")
 metadata/_custom_type_script = "uid://c6je2frrv1e3w"
 
 [node name="JomolithRigidBody" type="Node3D" parent="." unique_id=1902391273]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 27, 0)
 script = ExtResource("2_0xm2m")
 Size = Vector3(10, 10, 10)
+Restitution = 0.0
 metadata/_custom_type_script = "uid://cup7j0uasoo1y"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithRigidBody" unique_id=827978065]
 mesh = SubResource("BoxMesh_ud0jq")
 
 [node name="JomolithRigidBody2" type="Node3D" parent="." unique_id=1248056211]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -40, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.5, 0)
 script = ExtResource("2_0xm2m")
 Size = Vector3(100, 1, 100)
+Restitution = 0.0
 Anchored = true
 metadata/_custom_type_script = "uid://cup7j0uasoo1y"
 
@@ -53,4 +56,4 @@ metadata/_custom_type_script = "uid://cup7j0uasoo1y"
 mesh = SubResource("BoxMesh_0xm2m")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1266534983]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 22, 75.01926)
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 22, 75)

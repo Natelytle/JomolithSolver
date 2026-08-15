@@ -250,7 +250,7 @@ public class CollisionWorld : IDisposable
                     Restitution = combinedRestitution
                 });
 
-                Console.WriteLine($"[contact] depth={depth:F5} normal={normal} posA={posOnA}");
+                // Console.WriteLine($"[contact] depth={depth:F5} normal={normal} posA={posOnA}");
             }
 
             if (points.Count == 0) outContacts.Remove(key);

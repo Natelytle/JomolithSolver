@@ -145,7 +145,7 @@ public class Solver(SolverConfig config)
             outputs[i].LinearVelocity = bodyProps[i].LinearVelocity;
             outputs[i].AngularVelocity = bodyProps[i].AngularVelocity;
 
-            Console.WriteLine($"[body] pos={outputs[i].Position} angVel={outputs[i].AngularVelocity.Length():F3} det={outputs[i].Orientation.GetDeterminant():F4}");
+            // Console.WriteLine($"[body] pos={outputs[i].Position} angVel={outputs[i].AngularVelocity.Length():F3} det={outputs[i].Orientation.GetDeterminant():F4}");
         }
     }
 

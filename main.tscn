@@ -19,7 +19,7 @@ glow_enabled = true
 size = Vector3(10, 10, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_0xm2m"]
-size = Vector3(100, 1, 100)
+size = Vector3(1000, 1, 1000)
 
 [node name="Main" type="Node3D" unique_id=1879676109]
 
@@ -34,26 +34,2284 @@ shadow_enabled = true
 script = ExtResource("1_ig7tw")
 metadata/_custom_type_script = "uid://c6je2frrv1e3w"
 
-[node name="JomolithRigidBody" type="Node3D" parent="." unique_id=1902391273]
+[node name="JomolithCube" type="Node3D" parent="." unique_id=1902391273]
 transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 27, 0)
 script = ExtResource("2_0xm2m")
 Size = Vector3(10, 10, 10)
-Restitution = 0.0
 metadata/_custom_type_script = "uid://cup7j0uasoo1y"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithRigidBody" unique_id=827978065]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube" unique_id=827978065]
 mesh = SubResource("BoxMesh_ud0jq")
 
-[node name="JomolithRigidBody2" type="Node3D" parent="." unique_id=1248056211]
+[node name="JomolithCube2" type="Node3D" parent="." unique_id=1116712998]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 27, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube2" unique_id=467345192]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube3" type="Node3D" parent="." unique_id=826778684]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 27, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube3" unique_id=2007496412]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube4" type="Node3D" parent="." unique_id=1696594041]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 27, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube4" unique_id=424769044]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube5" type="Node3D" parent="." unique_id=1105528077]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 27, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube5" unique_id=1070161230]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube6" type="Node3D" parent="." unique_id=1433041026]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 27, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube6" unique_id=1223310786]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube7" type="Node3D" parent="." unique_id=1433446273]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 27, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube7" unique_id=1035571499]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube8" type="Node3D" parent="." unique_id=110181588]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 27, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube8" unique_id=1694717727]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube9" type="Node3D" parent="." unique_id=912648984]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 27, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube9" unique_id=2088833549]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube10" type="Node3D" parent="." unique_id=1299945189]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 44, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube10" unique_id=1340612807]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube11" type="Node3D" parent="." unique_id=2066310788]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 44, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube11" unique_id=1084523739]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube12" type="Node3D" parent="." unique_id=143898355]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 44, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube12" unique_id=1551814401]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube13" type="Node3D" parent="." unique_id=1863651946]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 44, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube13" unique_id=1556594541]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube14" type="Node3D" parent="." unique_id=2084156105]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 44, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube14" unique_id=1597162852]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube15" type="Node3D" parent="." unique_id=457912037]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 44, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube15" unique_id=2054181412]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube16" type="Node3D" parent="." unique_id=540612508]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 44, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube16" unique_id=276056837]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube17" type="Node3D" parent="." unique_id=1973217535]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 44, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube17" unique_id=511075400]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube18" type="Node3D" parent="." unique_id=280965032]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 44, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube18" unique_id=1127502343]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube19" type="Node3D" parent="." unique_id=514455658]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 64, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube19" unique_id=1155318626]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube20" type="Node3D" parent="." unique_id=1506928574]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 64, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube20" unique_id=831005203]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube21" type="Node3D" parent="." unique_id=1850058205]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 64, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube21" unique_id=838952694]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube22" type="Node3D" parent="." unique_id=1063358577]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 64, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube22" unique_id=1992799751]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube23" type="Node3D" parent="." unique_id=563716736]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 64, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube23" unique_id=623598965]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube24" type="Node3D" parent="." unique_id=1344702100]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 64, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube24" unique_id=1323217747]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube25" type="Node3D" parent="." unique_id=1437489796]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 64, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube25" unique_id=1330742777]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube26" type="Node3D" parent="." unique_id=789140892]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 64, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube26" unique_id=522578671]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube27" type="Node3D" parent="." unique_id=1980563152]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 64, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube27" unique_id=1368203720]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube28" type="Node3D" parent="." unique_id=1319878855]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 83, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube28" unique_id=1743456387]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube29" type="Node3D" parent="." unique_id=1886044386]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 83, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube29" unique_id=1047727982]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube30" type="Node3D" parent="." unique_id=166876892]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 83, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube30" unique_id=602359824]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube31" type="Node3D" parent="." unique_id=1264886094]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 83, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube31" unique_id=1244459633]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube32" type="Node3D" parent="." unique_id=1633445282]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 83, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube32" unique_id=61432958]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube33" type="Node3D" parent="." unique_id=873042323]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 83, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube33" unique_id=1109287327]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube34" type="Node3D" parent="." unique_id=546938996]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 83, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube34" unique_id=1680360578]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube35" type="Node3D" parent="." unique_id=1501212576]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 83, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube35" unique_id=1370679986]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube36" type="Node3D" parent="." unique_id=804750216]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 83, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube36" unique_id=1615430848]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube37" type="Node3D" parent="." unique_id=1373953808]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 107, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube37" unique_id=1609155930]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube38" type="Node3D" parent="." unique_id=397031505]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 107, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube38" unique_id=416539882]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube39" type="Node3D" parent="." unique_id=65682696]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 107, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube39" unique_id=1094939831]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube40" type="Node3D" parent="." unique_id=1323660101]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 107, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube40" unique_id=228165424]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube41" type="Node3D" parent="." unique_id=1030477447]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 107, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube41" unique_id=1414863286]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube42" type="Node3D" parent="." unique_id=1877057355]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 107, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube42" unique_id=547072257]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube43" type="Node3D" parent="." unique_id=1784085662]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 107, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube43" unique_id=1680801835]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube44" type="Node3D" parent="." unique_id=1722016466]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 107, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube44" unique_id=1617503283]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube45" type="Node3D" parent="." unique_id=343644677]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 107, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube45" unique_id=662140690]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube46" type="Node3D" parent="." unique_id=3977491]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 129, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube46" unique_id=591495257]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube47" type="Node3D" parent="." unique_id=282943388]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 129, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube47" unique_id=1365064988]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube48" type="Node3D" parent="." unique_id=1394921785]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 129, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube48" unique_id=998073726]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube49" type="Node3D" parent="." unique_id=1859849540]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 129, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube49" unique_id=171214697]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube50" type="Node3D" parent="." unique_id=1606128052]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 129, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube50" unique_id=1798088991]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube51" type="Node3D" parent="." unique_id=1305335825]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 129, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube51" unique_id=265435494]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube52" type="Node3D" parent="." unique_id=1889146713]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 129, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube52" unique_id=670432198]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube53" type="Node3D" parent="." unique_id=779939282]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 129, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube53" unique_id=111506920]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube54" type="Node3D" parent="." unique_id=677240729]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 129, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube54" unique_id=1407432142]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube55" type="Node3D" parent="." unique_id=32783224]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 152, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube55" unique_id=6314024]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube56" type="Node3D" parent="." unique_id=628307390]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 152, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube56" unique_id=2146808732]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube57" type="Node3D" parent="." unique_id=1633866199]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 152, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube57" unique_id=1168247573]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube58" type="Node3D" parent="." unique_id=798695841]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 152, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube58" unique_id=1562146939]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube59" type="Node3D" parent="." unique_id=560411098]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 152, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube59" unique_id=1471597114]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube60" type="Node3D" parent="." unique_id=543082078]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 152, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube60" unique_id=1371008660]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube61" type="Node3D" parent="." unique_id=1469088241]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 152, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube61" unique_id=633733704]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube62" type="Node3D" parent="." unique_id=917944530]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 152, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube62" unique_id=1491983281]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube63" type="Node3D" parent="." unique_id=1496929917]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 152, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube63" unique_id=989583111]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube64" type="Node3D" parent="." unique_id=214791978]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 27, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube64" unique_id=154281652]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube65" type="Node3D" parent="." unique_id=740980521]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 27, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube65" unique_id=1325632812]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube66" type="Node3D" parent="." unique_id=1910515617]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 27, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube66" unique_id=983316484]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube67" type="Node3D" parent="." unique_id=854341609]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 27, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube67" unique_id=1115679540]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube68" type="Node3D" parent="." unique_id=1801027628]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 27, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube68" unique_id=537851311]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube69" type="Node3D" parent="." unique_id=438003983]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 27, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube69" unique_id=454041117]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube70" type="Node3D" parent="." unique_id=602466952]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 27, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube70" unique_id=683768837]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube71" type="Node3D" parent="." unique_id=701224101]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 27, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube71" unique_id=156242629]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube72" type="Node3D" parent="." unique_id=802855548]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 27, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube72" unique_id=1871631625]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube73" type="Node3D" parent="." unique_id=1536031470]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 44, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube73" unique_id=588635763]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube74" type="Node3D" parent="." unique_id=161281488]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 44, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube74" unique_id=876443716]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube75" type="Node3D" parent="." unique_id=530628488]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 44, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube75" unique_id=1181013737]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube76" type="Node3D" parent="." unique_id=141805185]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 44, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube76" unique_id=410493149]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube77" type="Node3D" parent="." unique_id=578776275]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 44, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube77" unique_id=1655905804]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube78" type="Node3D" parent="." unique_id=1688461451]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 44, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube78" unique_id=837995643]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube79" type="Node3D" parent="." unique_id=2014830561]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 44, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube79" unique_id=981278833]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube80" type="Node3D" parent="." unique_id=1044460703]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 44, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube80" unique_id=1656242328]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube81" type="Node3D" parent="." unique_id=641262882]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 44, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube81" unique_id=677009071]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube82" type="Node3D" parent="." unique_id=1013668347]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 64, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube82" unique_id=2143160619]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube83" type="Node3D" parent="." unique_id=1386999822]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 64, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube83" unique_id=487737025]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube84" type="Node3D" parent="." unique_id=1256323935]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 64, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube84" unique_id=660930759]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube85" type="Node3D" parent="." unique_id=176596799]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 64, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube85" unique_id=1685253827]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube86" type="Node3D" parent="." unique_id=3769944]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 64, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube86" unique_id=299334272]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube87" type="Node3D" parent="." unique_id=345327505]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 64, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube87" unique_id=1564182906]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube88" type="Node3D" parent="." unique_id=1532940302]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 64, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube88" unique_id=106122146]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube89" type="Node3D" parent="." unique_id=1569143523]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 64, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube89" unique_id=1693687465]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube90" type="Node3D" parent="." unique_id=1561837686]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 64, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube90" unique_id=645585515]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube91" type="Node3D" parent="." unique_id=629453859]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 83, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube91" unique_id=1695769747]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube92" type="Node3D" parent="." unique_id=573855395]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 83, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube92" unique_id=589872117]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube93" type="Node3D" parent="." unique_id=840227666]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 83, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube93" unique_id=815294491]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube94" type="Node3D" parent="." unique_id=265775955]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 83, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube94" unique_id=1223421608]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube95" type="Node3D" parent="." unique_id=1458867789]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 83, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube95" unique_id=1563972099]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube96" type="Node3D" parent="." unique_id=1163072538]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 83, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube96" unique_id=1949587040]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube97" type="Node3D" parent="." unique_id=956683630]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 83, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube97" unique_id=1288916825]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube98" type="Node3D" parent="." unique_id=458403833]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 83, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube98" unique_id=1173241033]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube99" type="Node3D" parent="." unique_id=2013299147]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 83, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube99" unique_id=1411458783]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube100" type="Node3D" parent="." unique_id=1091236437]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 107, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube100" unique_id=2054803882]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube101" type="Node3D" parent="." unique_id=754969325]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 107, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube101" unique_id=2124127632]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube102" type="Node3D" parent="." unique_id=774333431]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 107, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube102" unique_id=274066468]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube103" type="Node3D" parent="." unique_id=167267829]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 107, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube103" unique_id=1642625821]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube104" type="Node3D" parent="." unique_id=1613386106]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 107, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube104" unique_id=1383841027]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube105" type="Node3D" parent="." unique_id=1871550068]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 107, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube105" unique_id=1589060849]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube106" type="Node3D" parent="." unique_id=582871959]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 107, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube106" unique_id=847249762]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube107" type="Node3D" parent="." unique_id=1159350440]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 107, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube107" unique_id=674787866]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube108" type="Node3D" parent="." unique_id=451042143]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 107, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube108" unique_id=1711253904]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube109" type="Node3D" parent="." unique_id=1170106903]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 129, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube109" unique_id=2015840819]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube110" type="Node3D" parent="." unique_id=1239731770]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 129, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube110" unique_id=1695020870]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube111" type="Node3D" parent="." unique_id=155105044]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 129, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube111" unique_id=2028671156]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube112" type="Node3D" parent="." unique_id=1623227079]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 129, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube112" unique_id=735187171]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube113" type="Node3D" parent="." unique_id=107974384]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 129, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube113" unique_id=866782151]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube114" type="Node3D" parent="." unique_id=257424483]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 129, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube114" unique_id=551604002]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube115" type="Node3D" parent="." unique_id=838838032]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 129, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube115" unique_id=824560617]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube116" type="Node3D" parent="." unique_id=206970760]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 129, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube116" unique_id=65004552]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube117" type="Node3D" parent="." unique_id=95337783]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 129, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube117" unique_id=86936569]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube118" type="Node3D" parent="." unique_id=168167204]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 152, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube118" unique_id=1479477598]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube119" type="Node3D" parent="." unique_id=1557582091]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 152, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube119" unique_id=1682035372]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube120" type="Node3D" parent="." unique_id=137700817]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 0, 152, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube120" unique_id=1001985686]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube121" type="Node3D" parent="." unique_id=788016738]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 152, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube121" unique_id=753305855]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube122" type="Node3D" parent="." unique_id=380662324]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 152, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube122" unique_id=605999517]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube123" type="Node3D" parent="." unique_id=1353445039]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 21, 152, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube123" unique_id=1246494769]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube124" type="Node3D" parent="." unique_id=1371146779]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 152, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube124" unique_id=1779298727]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube125" type="Node3D" parent="." unique_id=1364561496]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 152, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube125" unique_id=1096931571]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube126" type="Node3D" parent="." unique_id=1496679635]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, -17, 152, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube126" unique_id=852201783]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube127" type="Node3D" parent="." unique_id=1459946451]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 27, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube127" unique_id=954848325]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube128" type="Node3D" parent="." unique_id=2107537530]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 27, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube128" unique_id=1247929721]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube129" type="Node3D" parent="." unique_id=1194824617]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 27, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube129" unique_id=225426799]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube130" type="Node3D" parent="." unique_id=375252593]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 27, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube130" unique_id=1585159565]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube131" type="Node3D" parent="." unique_id=58396826]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 27, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube131" unique_id=126415644]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube132" type="Node3D" parent="." unique_id=1546904780]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 27, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube132" unique_id=1440182278]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube133" type="Node3D" parent="." unique_id=2077353066]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 27, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube133" unique_id=1541141703]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube134" type="Node3D" parent="." unique_id=2144809024]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 27, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube134" unique_id=261853269]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube135" type="Node3D" parent="." unique_id=1955217329]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 27, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube135" unique_id=778636151]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube136" type="Node3D" parent="." unique_id=233494724]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 44, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube136" unique_id=2144027870]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube137" type="Node3D" parent="." unique_id=1168197047]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 44, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube137" unique_id=998772922]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube138" type="Node3D" parent="." unique_id=1093927653]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 44, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube138" unique_id=2085704310]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube139" type="Node3D" parent="." unique_id=269511420]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 44, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube139" unique_id=985052436]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube140" type="Node3D" parent="." unique_id=1878632813]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 44, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube140" unique_id=715318476]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube141" type="Node3D" parent="." unique_id=1150888951]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 44, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube141" unique_id=690131956]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube142" type="Node3D" parent="." unique_id=313255012]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 44, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube142" unique_id=743591739]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube143" type="Node3D" parent="." unique_id=947152249]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 44, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube143" unique_id=789686288]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube144" type="Node3D" parent="." unique_id=647577675]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 44, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube144" unique_id=186296536]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube145" type="Node3D" parent="." unique_id=1519037753]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 64, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube145" unique_id=97360344]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube146" type="Node3D" parent="." unique_id=1323453266]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 64, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube146" unique_id=1002443525]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube147" type="Node3D" parent="." unique_id=945647049]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 64, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube147" unique_id=541411197]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube148" type="Node3D" parent="." unique_id=1555993756]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 64, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube148" unique_id=1054296330]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube149" type="Node3D" parent="." unique_id=1219281203]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 64, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube149" unique_id=972776400]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube150" type="Node3D" parent="." unique_id=1207398830]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 64, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube150" unique_id=1128039452]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube151" type="Node3D" parent="." unique_id=1701069900]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 64, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube151" unique_id=652141330]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube152" type="Node3D" parent="." unique_id=889328081]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 64, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube152" unique_id=502898391]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube153" type="Node3D" parent="." unique_id=2037351288]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 64, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube153" unique_id=2048953413]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube154" type="Node3D" parent="." unique_id=745048839]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 83, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube154" unique_id=433816501]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube155" type="Node3D" parent="." unique_id=1453480558]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 83, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube155" unique_id=750084164]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube156" type="Node3D" parent="." unique_id=846711628]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 83, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube156" unique_id=1735241471]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube157" type="Node3D" parent="." unique_id=1502624319]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 83, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube157" unique_id=737965153]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube158" type="Node3D" parent="." unique_id=1032731960]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 83, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube158" unique_id=817931439]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube159" type="Node3D" parent="." unique_id=1905172898]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 83, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube159" unique_id=2092279705]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube160" type="Node3D" parent="." unique_id=972375358]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 83, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube160" unique_id=659006103]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube161" type="Node3D" parent="." unique_id=957150870]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 83, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube161" unique_id=1989451369]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube162" type="Node3D" parent="." unique_id=1877521025]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 83, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube162" unique_id=1272662946]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube163" type="Node3D" parent="." unique_id=1023427863]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 107, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube163" unique_id=1930775425]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube164" type="Node3D" parent="." unique_id=991126955]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 107, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube164" unique_id=6249546]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube165" type="Node3D" parent="." unique_id=149333338]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 107, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube165" unique_id=880525246]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube166" type="Node3D" parent="." unique_id=2081161043]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 107, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube166" unique_id=92168903]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube167" type="Node3D" parent="." unique_id=1790361513]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 107, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube167" unique_id=1354023899]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube168" type="Node3D" parent="." unique_id=742381890]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 107, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube168" unique_id=881347555]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube169" type="Node3D" parent="." unique_id=1799565980]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 107, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube169" unique_id=1324749797]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube170" type="Node3D" parent="." unique_id=1100876348]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 107, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube170" unique_id=251414770]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube171" type="Node3D" parent="." unique_id=1763175503]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 107, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube171" unique_id=934885291]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube172" type="Node3D" parent="." unique_id=616245320]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 129, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube172" unique_id=1264241074]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube173" type="Node3D" parent="." unique_id=697657973]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 129, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube173" unique_id=842312678]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube174" type="Node3D" parent="." unique_id=89291022]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 129, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube174" unique_id=1773055427]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube175" type="Node3D" parent="." unique_id=37862110]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 129, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube175" unique_id=765260140]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube176" type="Node3D" parent="." unique_id=422633851]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 129, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube176" unique_id=1528528351]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube177" type="Node3D" parent="." unique_id=112003562]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 129, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube177" unique_id=1971486024]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube178" type="Node3D" parent="." unique_id=698014679]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 129, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube178" unique_id=374167352]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube179" type="Node3D" parent="." unique_id=2079094102]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 129, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube179" unique_id=1565653801]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube180" type="Node3D" parent="." unique_id=682930329]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 129, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube180" unique_id=2088133933]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube181" type="Node3D" parent="." unique_id=1661575794]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 152, 0)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube181" unique_id=601429650]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube182" type="Node3D" parent="." unique_id=1601826109]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 152, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube182" unique_id=375832338]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube183" type="Node3D" parent="." unique_id=1655140757]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 152, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube183" unique_id=1010434254]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube184" type="Node3D" parent="." unique_id=1770663952]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 152, -18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube184" unique_id=1503681231]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube185" type="Node3D" parent="." unique_id=499871092]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 152, 1)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube185" unique_id=1095936216]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube186" type="Node3D" parent="." unique_id=2051519234]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 152, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube186" unique_id=1225746340]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube187" type="Node3D" parent="." unique_id=93028293]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 152, 18)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube187" unique_id=121971716]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube188" type="Node3D" parent="." unique_id=1247586721]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 152, -2)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube188" unique_id=2075951781]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube189" type="Node3D" parent="." unique_id=1771456843]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 152, -21)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube189" unique_id=1028263175]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube190" type="Node3D" parent="." unique_id=891275780]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 27, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube190" unique_id=1430205158]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube191" type="Node3D" parent="." unique_id=2038061327]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 27, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube191" unique_id=991294626]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube192" type="Node3D" parent="." unique_id=502708917]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 27, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube192" unique_id=62688474]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube193" type="Node3D" parent="." unique_id=902563725]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 27, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube193" unique_id=1556997121]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube194" type="Node3D" parent="." unique_id=1651012206]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 27, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube194" unique_id=1857301706]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube195" type="Node3D" parent="." unique_id=1590667221]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 27, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube195" unique_id=811606868]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube196" type="Node3D" parent="." unique_id=304367286]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 27, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube196" unique_id=143906999]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube197" type="Node3D" parent="." unique_id=302402988]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 27, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube197" unique_id=1470533981]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube198" type="Node3D" parent="." unique_id=1928867475]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 27, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube198" unique_id=509440875]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube199" type="Node3D" parent="." unique_id=79538206]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 44, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube199" unique_id=265161470]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube200" type="Node3D" parent="." unique_id=823110928]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 44, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube200" unique_id=989457760]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube201" type="Node3D" parent="." unique_id=1932166131]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 44, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube201" unique_id=706210501]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube202" type="Node3D" parent="." unique_id=886841532]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 44, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube202" unique_id=790430007]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube203" type="Node3D" parent="." unique_id=2081949838]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 44, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube203" unique_id=1058683614]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube204" type="Node3D" parent="." unique_id=356728011]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 44, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube204" unique_id=349589336]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube205" type="Node3D" parent="." unique_id=246375190]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 44, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube205" unique_id=343835955]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube206" type="Node3D" parent="." unique_id=916908214]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 44, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube206" unique_id=1817105217]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube207" type="Node3D" parent="." unique_id=513171020]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 44, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube207" unique_id=507893720]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube208" type="Node3D" parent="." unique_id=1132809957]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 64, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube208" unique_id=2001202431]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube209" type="Node3D" parent="." unique_id=579754155]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 64, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube209" unique_id=1306126174]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube210" type="Node3D" parent="." unique_id=641265314]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 64, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube210" unique_id=989580845]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube211" type="Node3D" parent="." unique_id=1481422106]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 64, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube211" unique_id=1353055353]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube212" type="Node3D" parent="." unique_id=1733435421]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 64, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube212" unique_id=435941759]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube213" type="Node3D" parent="." unique_id=1057346004]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 64, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube213" unique_id=1370632481]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube214" type="Node3D" parent="." unique_id=1212272982]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 64, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube214" unique_id=700484783]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube215" type="Node3D" parent="." unique_id=1291976893]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 64, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube215" unique_id=1025350432]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube216" type="Node3D" parent="." unique_id=542218825]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 64, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube216" unique_id=1625411518]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube217" type="Node3D" parent="." unique_id=1013642637]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 83, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube217" unique_id=497628592]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube218" type="Node3D" parent="." unique_id=479493551]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 83, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube218" unique_id=1341556813]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube219" type="Node3D" parent="." unique_id=1335727092]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 83, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube219" unique_id=1646840366]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube220" type="Node3D" parent="." unique_id=2087025983]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 83, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube220" unique_id=885270105]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube221" type="Node3D" parent="." unique_id=1197591462]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 83, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube221" unique_id=1991563415]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube222" type="Node3D" parent="." unique_id=1279151553]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 83, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube222" unique_id=1036355696]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube223" type="Node3D" parent="." unique_id=970691768]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 83, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube223" unique_id=473591255]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube224" type="Node3D" parent="." unique_id=1216397422]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 83, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube224" unique_id=781471788]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube225" type="Node3D" parent="." unique_id=1362506525]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 83, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube225" unique_id=708152653]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube226" type="Node3D" parent="." unique_id=1443758585]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 107, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube226" unique_id=1438532897]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube227" type="Node3D" parent="." unique_id=377891595]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 107, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube227" unique_id=1933529471]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube228" type="Node3D" parent="." unique_id=769565828]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 107, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube228" unique_id=1434742718]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube229" type="Node3D" parent="." unique_id=1320061533]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 107, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube229" unique_id=293169659]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube230" type="Node3D" parent="." unique_id=355124584]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 107, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube230" unique_id=438631128]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube231" type="Node3D" parent="." unique_id=12542161]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 107, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube231" unique_id=1178579412]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube232" type="Node3D" parent="." unique_id=1527066036]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 107, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube232" unique_id=1570014639]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube233" type="Node3D" parent="." unique_id=1428555414]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 107, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube233" unique_id=1128057036]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube234" type="Node3D" parent="." unique_id=1913895270]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 107, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube234" unique_id=223921788]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube235" type="Node3D" parent="." unique_id=1450907605]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 129, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube235" unique_id=522103084]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube236" type="Node3D" parent="." unique_id=2067769232]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 129, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube236" unique_id=2073087035]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube237" type="Node3D" parent="." unique_id=1601010709]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 129, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube237" unique_id=690222182]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube238" type="Node3D" parent="." unique_id=642649836]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 129, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube238" unique_id=438435418]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube239" type="Node3D" parent="." unique_id=88914036]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 129, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube239" unique_id=284503406]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube240" type="Node3D" parent="." unique_id=814084551]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 129, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube240" unique_id=1099394481]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube241" type="Node3D" parent="." unique_id=2076390358]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 129, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube241" unique_id=470131435]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube242" type="Node3D" parent="." unique_id=1472333810]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 129, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube242" unique_id=1290567702]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube243" type="Node3D" parent="." unique_id=807194316]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 129, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube243" unique_id=1374996889]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube244" type="Node3D" parent="." unique_id=270557762]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 152, -57)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube244" unique_id=1240306168]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube245" type="Node3D" parent="." unique_id=2057025342]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 152, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube245" unique_id=898777320]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube246" type="Node3D" parent="." unique_id=926478499]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 60, 152, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube246" unique_id=1033078122]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube247" type="Node3D" parent="." unique_id=1896506546]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 152, -75)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube247" unique_id=1331318897]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube248" type="Node3D" parent="." unique_id=9229342]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 152, -56)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube248" unique_id=983991609]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube249" type="Node3D" parent="." unique_id=386535837]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 81, 152, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube249" unique_id=844905183]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube250" type="Node3D" parent="." unique_id=1816187303]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 152, -39)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube250" unique_id=1225786488]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube251" type="Node3D" parent="." unique_id=918511367]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 152, -59)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube251" unique_id=1913101268]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithCube252" type="Node3D" parent="." unique_id=555648093]
+transform = Transform3D(0.8191522, -0.5735764, 0, 0.36868787, 0.52654076, -0.7660444, 0.43938512, 0.6275068, 0.6427876, 43, 152, -78)
+script = ExtResource("2_0xm2m")
+Size = Vector3(10, 10, 10)
+metadata/_custom_type_script = "uid://cup7j0uasoo1y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithCube252" unique_id=1001100796]
+mesh = SubResource("BoxMesh_ud0jq")
+
+[node name="JomolithBaseplate" type="Node3D" parent="." unique_id=1248056211]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.5, 0)
 script = ExtResource("2_0xm2m")
-Size = Vector3(100, 1, 100)
+Size = Vector3(1000, 1, 1000)
 Restitution = 0.0
 Anchored = true
 metadata/_custom_type_script = "uid://cup7j0uasoo1y"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithRigidBody2" unique_id=1930322204]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JomolithBaseplate" unique_id=1930322204]
 mesh = SubResource("BoxMesh_0xm2m")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1266534983]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 22, 75)
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 28, 73, 73)

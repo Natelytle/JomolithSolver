@@ -66,6 +66,6 @@ public class ContactManifold(Body a, Body b)
         if (clean.Count < Collisions.Count)
             Collisions.RemoveRange(clean.Count, Collisions.Count - clean.Count);
 
-        Console.WriteLine($"[manifold] cached={Collisions.Count} fresh={clean.Count}");
+        // Console.WriteLine($"[manifold] cached={Collisions.Count} fresh={clean.Count}");
     }
 }

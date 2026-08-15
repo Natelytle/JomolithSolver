@@ -1,6 +1,7 @@
 
 using System;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 
 namespace JomolithSolver.Solver;
 
@@ -89,8 +90,8 @@ public static class SolverKernel
                 offset += 3;
             }
 
-            if (velStage.Length >= Math.Max(offset, 3))
-                Console.WriteLine($"[solve] normalImpulse={velStage[offset - 3].Impulse:F4} t1={velStage[offset - 2].Impulse:F4} t2={velStage[offset - 1].Impulse:F4}");
+            // if (velStage.Length >= Math.Max(offset, 3))
+            //     Console.WriteLine($"[solve] normalImpulse={velStage[offset - 3].Impulse:F4} t1={velStage[offset - 2].Impulse:F4} t2={velStage[offset - 1].Impulse:F4}");
         }
     }
 
@@ -522,12 +523,16 @@ public static class SolverKernel
             vars[1].Impulse = n1;
             vars[2].Impulse = n2;
 
-            AddImpulseToVirD(ref virDA, d0, effMass[0].A);
-            AddImpulseToVirD(ref virDA, d1, effMass[1].A);
-            AddImpulseToVirD(ref virDA, d2, effMass[2].A);
-            AddImpulseToVirD(ref virDB, d0, effMass[0].B);
-            AddImpulseToVirD(ref virDB, d1, effMass[1].B);
-            AddImpulseToVirD(ref virDB, d2, effMass[2].B);
+            AddImpulse3DToVirD(ref virDA, d0, d1, d2, effMass[0].A, effMass[1].A, effMass[2].A);
+            AddImpulse3DToVirD(ref virDB, d0, d1, d2, effMass[0].B, effMass[1].B, effMass[2].B);
         }
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    private static void AddImpulse3DToVirD(ref VirtualDisplacement virD, float d0, float d1, float d2,
+        in EffectiveMass eff0, in EffectiveMass eff1, in EffectiveMass eff2)
+    {
+        virD.Linear += d0 * eff0.Linear + d1 * eff1.Linear + d2 * eff2.Linear;
+        virD.Angular += d0 * eff0.Angular + d1 * eff1.Angular + d2 * eff2.Angular;
     }
 }

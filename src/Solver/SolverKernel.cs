@@ -10,8 +10,8 @@ public static class SolverKernel
     public static void SolveKernel(
         ConstraintVariables[] velStage,
         ConstraintVariables[] posStage,
-        ref VirtualDisplacementArray virDVel,
-        ref VirtualDisplacementArray virDPos,
+        VirtualDisplacement[] virDVel,
+        VirtualDisplacement[] virDPos,
         ConstraintJacobianPair[] preJacVel,
         ConstraintJacobianPair[] preJacPos,
         EffectiveMassPair[] effVel,
@@ -307,8 +307,8 @@ public static class SolverKernel
     }
 
     public static void InitVirtualDisplacements(
-        ref VirtualDisplacementArray virDVel,
-        ref VirtualDisplacementArray virDPos,
+        VirtualDisplacement[] virDVel,
+        VirtualDisplacement[] virDPos,
         ConstraintVariables[] velStage,
         ConstraintVariables[] posStage,
         EffectiveMassPair[] effVel,

@@ -10,6 +10,52 @@ public class Solver(SolverConfig config)
 {
     private SolverConfig config = config;
 
+    // Buffers to prevent constant allocations
+    // Body count size
+    private SolverBody.SolverBodyMassAndInertia[] massAndInertia = [];
+    private SolverBody.SolverBodyDynamicProperties[] bodyProps = [];
+    private VirtualDisplacement[] virDVel = [];
+    private VirtualDisplacement[] virDPos = [];
+    private float[] multipliers = [];
+
+    // Total dim size
+    private ConstraintJacobianPair[] jacobians = [];
+    private ConstraintVariables[] velStage = [];
+    private ConstraintVariables[] posStage = [];
+    private float[] sorVel = [];
+    private float[] sorPos = [];
+    private bool[] useBlock = [];
+    private EffectiveMassPair[] effVel = [];
+    private EffectiveMassPair[] effPos = [];
+    private ConstraintJacobianPair[] preJacVel = [];
+    private ConstraintJacobianPair[] preJacPos = [];
+
+    private void EnsureBufferCapacity(int bodyCount, int totalDimensions)
+    {
+        if (massAndInertia.Length < bodyCount)
+        {
+            massAndInertia = new SolverBody.SolverBodyMassAndInertia[bodyCount];
+            bodyProps = new SolverBody.SolverBodyDynamicProperties[bodyCount];
+            virDVel = new VirtualDisplacement[bodyCount];
+            virDPos = new VirtualDisplacement[bodyCount];
+            multipliers = new float[bodyCount];
+        }
+
+        if (jacobians.Length < totalDimensions)
+        {
+            jacobians = new ConstraintJacobianPair[totalDimensions];
+            velStage = new ConstraintVariables[totalDimensions];
+            posStage = new ConstraintVariables[totalDimensions];
+            sorVel = new float[totalDimensions];
+            sorPos = new float[totalDimensions];
+            useBlock = new bool[totalDimensions];
+            effVel = new EffectiveMassPair[totalDimensions];
+            effPos = new EffectiveMassPair[totalDimensions];
+            preJacVel = new ConstraintJacobianPair[totalDimensions];
+            preJacPos = new ConstraintJacobianPair[totalDimensions];
+        }
+    }
+
     public void Solve(
         SimBodyInput[] bodies,
         Constraint[] constraints,
@@ -29,9 +75,9 @@ public class Solver(SolverConfig config)
             totalDim += d;
         }
 
-        // Step 1: Build mass and inertia arrays
-        SolverBody.SolverBodyMassAndInertia[] massAndInertia = new SolverBody.SolverBodyMassAndInertia[bodyCount];
+        EnsureBufferCapacity(bodyCount, totalDim);
 
+        // Step 1: Build mass and inertia arrays
         for (int i = 0; i < bodyCount; i++)
         {
             SimBodyInput b = bodies[i];
@@ -43,8 +89,6 @@ public class Solver(SolverConfig config)
         }
 
         // Step 2: Integrate velocities and initialize body properties
-        SolverBody.SolverBodyDynamicProperties[] bodyProps = new SolverBody.SolverBodyDynamicProperties[bodyCount];
-
         for (int i = 0; i < bodyCount; i++)
         {
             SimBodyInput b = bodies[i];
@@ -55,14 +99,7 @@ public class Solver(SolverConfig config)
             IntegrateVelocities(ref bodyProps[i], massAndInertia[i], b, dt, config);
         }
 
-        // Step 3: Allocate constraint arrays
-        ConstraintJacobianPair[] jacobians = new ConstraintJacobianPair[totalDim];
-        ConstraintVariables[] velStage = new ConstraintVariables[totalDim];
-        ConstraintVariables[] posStage = new ConstraintVariables[totalDim];
-        float[] sorVel = new float[totalDim];
-        float[] sorPos = new float[totalDim];
-        bool[] useBlock = new bool[totalDim];
-
+        // Step 3: Reset constraint arrays
         for (int i = 0; i < totalDim; i++)
         {
             sorVel[i] = 1;
@@ -97,17 +134,12 @@ public class Solver(SolverConfig config)
         }
 
         // Step 5: Compute effective masses
-        EffectiveMassPair[] effVel = new EffectiveMassPair[totalDim];
-        EffectiveMassPair[] effPos = new EffectiveMassPair[totalDim];
         SolverKernel.ComputeEffectiveMasses(effVel, effPos, jacobians, pairs, dimensions, massAndInertia, config);
 
         // Step 6: Precondition
-        ConstraintJacobianPair[] preJacVel = new ConstraintJacobianPair[totalDim];
-        ConstraintJacobianPair[] preJacPos = new ConstraintJacobianPair[totalDim];
         SolverKernel.PreconditionConstraintEquations(preJacVel, preJacPos, velStage, posStage, jacobians, pairs, dimensions, useBlock, sorVel, sorPos, effVel, effPos, config);
 
         // Step 7: Apply effective mass multipliers (sleeping bodies)
-        float[] multipliers = new float[bodyCount];
         for (int i = 0; i < bodyCount; i++)
         {
             multipliers[i] = bodies[i].EffectiveMassMultiplier;
@@ -116,14 +148,16 @@ public class Solver(SolverConfig config)
         SolverKernel.ApplyEffectiveMassMultipliers(effVel, effPos, pairs, dimensions, multipliers, config);
 
         // Step 8: Init virtual displacements
-        VirtualDisplacementArray virDVel = new VirtualDisplacementArray(bodyCount);
-        VirtualDisplacementArray virDPos = new VirtualDisplacementArray(bodyCount);
-        virDVel.Reset();
-        virDPos.Reset();
-        SolverKernel.InitVirtualDisplacements(ref virDVel, ref virDPos, velStage, posStage, effVel, effPos, pairs, dimensions, config);
+        for (int i = 0; i < virDVel.Length; i++)
+        {
+            virDVel[i].Reset();
+            virDPos[i].Reset();
+        }
+
+        SolverKernel.InitVirtualDisplacements(virDVel, virDPos, velStage, posStage, effVel, effPos, pairs, dimensions, config);
 
         // Step 9: Run PGS Kernel
-        SolverKernel.SolveKernel(velStage, posStage, ref virDVel, ref virDPos, preJacVel, preJacPos, effVel, effPos, pairs, dimensions, collisionCount, config);
+        SolverKernel.SolveKernel(velStage, posStage, virDVel, virDPos, preJacVel, preJacPos, effVel, effPos, pairs, dimensions, collisionCount, config);
 
         // Step 10: Cache constraint results
         offset = 0;

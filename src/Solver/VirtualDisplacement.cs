@@ -17,17 +17,3 @@ public struct VirtualDisplacement(in Vector3 linear, in Vector3 angular)
         Angular = Vector3.Zero;
     }
 }
-
-public struct VirtualDisplacementArray(int length)
-{
-    private readonly VirtualDisplacement[] data = new VirtualDisplacement[length];
-
-    public void Reset()
-    {
-        for (var i = 0; i < data.Length; i++) data[i].Reset();
-    }
-
-    public ref VirtualDisplacement this[int i] => ref data[i];
-
-    public int Size => data.Length;
-}

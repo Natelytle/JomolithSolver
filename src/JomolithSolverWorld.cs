@@ -72,17 +72,24 @@ public partial class JomolithSolverWorld : Node
         collisionWorld.ExtractContacts(freshContacts, bodyLookup);
         contactManager.Update(freshContacts, bodyLookup);
 
-        // All unanchored bodies are required
+        requiredBodies.Clear();
+
         foreach (var rb in registeredBodies)
         {
             if (!rb.Anchored) requiredBodies.Add(rb.SolverBody);
         }
 
-        // All colliding bodies are required
+        // All colliding bodies are required (unless both are anchored)
         foreach (var kv in bodyLookup)
         {
-            requiredBodies.Add(kv.Value.A);
-            requiredBodies.Add(kv.Value.B);
+            var bodyA = kv.Value.A;
+            var bodyB = kv.Value.B;
+
+            if (bodyA.IsStatic && bodyB.IsStatic)
+                continue;
+
+            requiredBodies.Add(bodyA);
+            requiredBodies.Add(bodyB);
         }
     }
 
@@ -102,7 +109,8 @@ public partial class JomolithSolverWorld : Node
         foreach (var body in requiredBodies)
         {
             // Apply gravity
-            body.AccumulateForce(new System.Numerics.Vector3(0, -(float)ProjectSettings.GetSetting("physics/3d/default_gravity") * body.Mass, 0));
+            System.Numerics.Vector3 gravity = new System.Numerics.Vector3(0, -(float)ProjectSettings.GetSetting("physics/3d/default_gravity") * body.Mass, 0);
+            body.AccumulateForceAtPoint(gravity, body.GetWorldCFrame().Translation);
 
             uidToIndex[body.Uid] = index;
 
@@ -160,7 +168,6 @@ public partial class JomolithSolverWorld : Node
 
             rb.Position = new Vector3(outData.Position.X, outData.Position.Y, outData.Position.Z);
             rb.Basis = outData.Orientation.ToBasis();
-            rb.Basis = rb.Basis.ToMatrix().ToBasis().ToMatrix().ToBasis();
 
             rb.LinearVelocity = new Vector3(outData.LinearVelocity.X, outData.LinearVelocity.Y, outData.LinearVelocity.Z);
             rb.AngularVelocity = new Vector3(outData.AngularVelocity.X, outData.AngularVelocity.Y, outData.AngularVelocity.Z);

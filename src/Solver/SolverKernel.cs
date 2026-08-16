@@ -53,18 +53,18 @@ public static class SolverKernel
                         break;
                     case 2:
                         UpdateConstraint2D(
-                            velStage.AsSpan(offset), posStage.AsSpan(offset),
+                            velStage.AsSpan(offset, 2), posStage.AsSpan(offset, 2),
                             ref vaVel, ref vbVel, ref vaPos, ref vbPos,
-                            preJacVel.AsSpan(offset), preJacPos.AsSpan(offset),
-                            effVel.AsSpan(offset), effPos.AsSpan(offset)
+                            preJacVel.AsSpan(offset, 2), preJacPos.AsSpan(offset, 2),
+                            effVel.AsSpan(offset, 2), effPos.AsSpan(offset, 2)
                         );
                         break;
                     case 3:
                         UpdateConstraint3D(
-                            velStage.AsSpan(offset), posStage.AsSpan(offset),
+                            velStage.AsSpan(offset, 3), posStage.AsSpan(offset, 3),
                             ref vaVel, ref vbVel, ref vaPos, ref vbPos,
-                            preJacVel.AsSpan(offset), preJacPos.AsSpan(offset),
-                            effVel.AsSpan(offset), effPos.AsSpan(offset),
+                            preJacVel.AsSpan(offset, 3), preJacPos.AsSpan(offset, 3),
+                            effVel.AsSpan(offset, 3), effPos.AsSpan(offset, 3),
                             false
                         );
                         break;
@@ -80,10 +80,10 @@ public static class SolverKernel
                 int iB = pairs[c].Second;
 
                 UpdateConstraint3D(
-                    velStage.AsSpan(offset), posStage.AsSpan(offset),
+                    velStage.AsSpan(offset, 3), posStage.AsSpan(offset, 3),
                     ref virDVel[iA], ref virDVel[iB], ref virDPos[iA], ref virDPos[iB],
-                    preJacVel.AsSpan(offset), preJacPos.AsSpan(offset),
-                    effVel.AsSpan(offset), effPos.AsSpan(offset),
+                    preJacVel.AsSpan(offset, 3), preJacPos.AsSpan(offset, 3),
+                    effVel.AsSpan(offset, 3), effPos.AsSpan(offset, 3),
                     true
                 );
 
@@ -391,17 +391,20 @@ public static class SolverKernel
         return r;
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private static float ProjectVirD(in ConstraintJacobianPair j, in VirtualDisplacement va, in VirtualDisplacement vb)
     {
         return Vector3.Dot(j.A.Linear, va.Linear) + Vector3.Dot(j.A.Angular, va.Angular) + Vector3.Dot(j.B.Linear, vb.Linear) + Vector3.Dot(j.B.Angular, vb.Angular);
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private static void AddImpulseToVirD(ref VirtualDisplacement virD, float dImpulse, in EffectiveMass eff)
     {
         virD.Linear += dImpulse * eff.Linear;
         virD.Angular += dImpulse * eff.Angular;
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private static void SolveDimension(
         ref ConstraintVariables constraint,
         ref VirtualDisplacement virtualDisplacementA, ref VirtualDisplacement virtualDisplacementB,

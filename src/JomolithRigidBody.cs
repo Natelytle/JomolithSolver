@@ -18,6 +18,32 @@ public partial class JomolithRigidBody : Node3D
 
     public Body SolverBody { get; } = new();
 
+    [Export]
+    public JomolithRigidBody? Parent
+    {
+        get;
+        set
+        {
+            SolverBody.Detach();
+            field = value;
+            AttachToParent(value);
+        }
+    } = null;
+
+    private void AttachToParent(JomolithRigidBody? parent)
+    {
+        if (parent is not null)
+        {
+            var worldCf = new CoordinateFrame(GlobalBasis.ToMatrix(), GlobalPosition.ToNumerics());
+            var parentCf = new CoordinateFrame(parent.GlobalBasis.ToMatrix(), parent.GlobalPosition.ToNumerics());
+
+            var parentBody = parent.SolverBody;
+            var localCfChild = parentCf.Inverse() * worldCf;
+
+            parentBody.WeldChild(SolverBody, localCfChild);
+        }
+    }
+
     // Exported properties are kind of roundabout, this is to ensure that the default values display properly in the godot editor.
     #region Exported Properties
 
@@ -114,6 +140,7 @@ public partial class JomolithRigidBody : Node3D
         SolverBody.Friction = Friction;
         SolverBody.Restitution = Restitution;
         SolverBody.IsStatic = Anchored;
+        AttachToParent(Parent);
 
         _ReadyInternal();
     }

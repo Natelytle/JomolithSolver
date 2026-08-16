@@ -136,7 +136,7 @@ public class Body(long uid = 0)
         if (IsStatic) return;
         var r = GetRoot();
         r.ExternalForce += f;
-        var rel = worldPoint - r.worldCFrame.Translation;
+        var rel = worldPoint - r.GetWorldCFrame().Translation;
         r.ExternalTorque += Vector3.Cross(rel, f);
     }
 
@@ -151,7 +151,7 @@ public class Body(long uid = 0)
         if (IsStatic) return;
         var r = GetRoot();
         r.ExternalImpulse += i;
-        var rel = worldPoint - r.worldCFrame.Translation;
+        var rel = worldPoint - r.GetWorldCFrame().Translation;
         r.ExternalRotationalImpulse += Vector3.Cross(rel, i);
     }
 
@@ -176,7 +176,7 @@ public class Body(long uid = 0)
 
         if (r.branchDirty) r.RecomputeBranchProperties();
 
-        return r.worldCFrame.Translation + Vector3.TransformNormal(r.branchCofmOffsetLocal, r.worldCFrame.Rotation);
+        return r.GetWorldCFrame().Translation + Vector3.TransformNormal(r.branchCofmOffsetLocal, r.GetWorldCFrame().Rotation);
     }
 
     public Matrix4x4 GetBranchInertiaWorldAtPoint(Vector3 worldPoint)
@@ -185,15 +185,14 @@ public class Body(long uid = 0)
 
         if (r.branchDirty) r.RecomputeBranchProperties();
 
-        var rot = r.worldCFrame.Rotation;
+        var rot = r.GetWorldCFrame().Rotation;
         var iWorld = Matrix4x4.Transpose(rot) * r.branchInertiaLocal * rot;
 
-        var cofmWorld = r.worldCFrame.Translation + Vector3.TransformNormal(r.branchCofmOffsetLocal, rot);
+        var cofmWorld = r.GetWorldCFrame().Translation + Vector3.TransformNormal(r.branchCofmOffsetLocal, Matrix4x4.Transpose(rot));
         var d = worldPoint - cofmWorld;
+        var l = d.Length();
 
-        var ddotd = Vector3.Dot(d, d);
-
-        var shift = BuildShiftMatrix(d, ddotd);
+        var shift = BuildShiftMatrix(d);
 
         shift *= r.branchMass;
         return iWorld + shift;
@@ -220,6 +219,7 @@ public class Body(long uid = 0)
     public CoordinateFrame GetWorldCFrame()
     {
         if (Parent is null) return worldCFrame;
+
         return Parent.GetWorldCFrame() * localCFrame;
     }
 
@@ -257,17 +257,16 @@ public class Body(long uid = 0)
         if (totalMass > 0.0f)
         {
             var cofmWorld = cofmWorldAccumulated / totalMass;
-            branchCofmOffsetLocal = Vector3.TransformNormal(cofmWorld - worldCFrame.Translation, Matrix4x4.Transpose(worldCFrame.Rotation));
+            branchCofmOffsetLocal = Vector3.TransformNormal(cofmWorld - GetWorldCFrame().Translation, Matrix4x4.Transpose(GetWorldCFrame().Rotation));
 
             var r = cofmWorld;
-            var rdotr = Vector3.Dot(r, r);
 
-            var shift = BuildShiftMatrix(r, rdotr);
+            var shift = BuildShiftMatrix(r);
 
             shift *= totalMass;
             var inertiaAboutCofm = inertiaWorldOrigin - shift;
 
-            branchInertiaLocal =  worldCFrame.Rotation * inertiaAboutCofm * Matrix4x4.Transpose(worldCFrame.Rotation);
+            branchInertiaLocal =  GetWorldCFrame().Rotation * inertiaAboutCofm * Matrix4x4.Transpose(GetWorldCFrame().Rotation);
         }
         else
         {
@@ -280,7 +279,7 @@ public class Body(long uid = 0)
 
     private void RecomputeBranchRecursive(ref float outMass, ref Vector3 outCofmWorld, ref Matrix4x4 outInertiaWorld)
     {
-        var myWorld = Parent is not null ? Parent.worldCFrame * localCFrame : worldCFrame;
+        var myWorld = Parent is not null ? Parent.GetWorldCFrame() * localCFrame : worldCFrame;
 
         if (!IsStatic && Mass > 0.0f)
         {
@@ -291,9 +290,8 @@ public class Body(long uid = 0)
             var rot = myWorld.Rotation;
             var iWorld = Matrix4x4.Transpose(rot) * InertiaBody * rot;
             var r = myCofmWorld;
-            var rdotr = Vector3.Dot(r, r);
 
-            var shift = BuildShiftMatrix(r, rdotr);
+            var shift = BuildShiftMatrix(r);
 
             shift *= Mass;
             outInertiaWorld += iWorld + shift;
@@ -303,18 +301,32 @@ public class Body(long uid = 0)
             body.RecomputeBranchRecursive(ref outMass, ref outCofmWorld, ref outInertiaWorld);
     }
 
-    private static Matrix4x4 BuildShiftMatrix(Vector3 r, float rdotr)
+    private static Matrix4x4 BuildShiftMatrix(Vector3 r)
     {
-        var shift = Matrix4x4.Identity;
-        shift.M11 = rdotr - r.X * r.X;
-        shift.M12 = -r.X * r.Y;
-        shift.M13 = -r.X * r.Z;
-        shift.M21 = -r.Y * r.X;
-        shift.M22 = rdotr - r.Y * r.Y;
-        shift.M23 = -r.Y * r.Z;
-        shift.M31 = -r.Z * r.X;
-        shift.M32 = -r.Z * r.Y;
-        shift.M33 = rdotr - r.Z * r.Z;
+        float rDotR = Vector3.Dot(r, r);
+        Matrix4x4 rOutR = OuterProduct(r, r);
+        var shift = Matrix4x4.Identity * rDotR - rOutR;
+
         return shift;
+    }
+
+    private static Matrix4x4 OuterProduct(Vector3 first, Vector3 second)
+    {
+        float[,] result = new float[3, 3];
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                result[i, j] += first[i] * second[j];
+            }
+        }
+
+        return new Matrix4x4(
+            result[0, 0], result[0, 1], result[0, 2], 0,
+            result[1, 0], result[1, 1], result[1, 2], 0,
+            result[2, 0], result[2, 1], result[2, 2], 0,
+            0, 0, 0, 1
+        );
     }
 }

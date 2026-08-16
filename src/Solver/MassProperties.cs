@@ -56,7 +56,7 @@ public readonly struct MassProperties(float mass, Matrix4x4 inertiaBody)
     {
         var mass = density * SphereVolume(radius);
 
-        var I = 0.4f * density * radius * radius;
+        var I = 0.4f * mass * radius * radius;
 
         var inertiaBody = Matrix4x4.Identity;
 

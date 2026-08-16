@@ -42,7 +42,7 @@ public class ContactManager
         }
     }
 
-    public bool IsGrounded(long rootUid, float upThreshold = 0.7f)
+    public bool IsGrounded(long rootUid, float upThreshold = 0.9f)
     {
         foreach (var m in manifolds.Values)
         {

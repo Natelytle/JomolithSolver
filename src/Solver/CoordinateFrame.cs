@@ -16,7 +16,7 @@ public record struct CoordinateFrame(in Matrix4x4 Rotation, in Vector3 Translati
     public static CoordinateFrame operator *(in CoordinateFrame cf, in CoordinateFrame other)
     {
         return new CoordinateFrame(other.Rotation * cf.Rotation,
-            Vector3.TransformNormal(other.Translation, cf.Rotation) + cf.Translation);
+            Vector3.TransformNormal(other.Translation, Matrix4x4.Transpose(cf.Rotation)) + cf.Translation); // TODO: Why do we transpose parent rotation here
     }
 
     public CoordinateFrame Inverse()
